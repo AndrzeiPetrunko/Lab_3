@@ -22,10 +22,12 @@ namespace Lab_3
             this.title = tytul;
             this.date = DateTime.Today;
         }
+        Random rand = new Random();
         public void View()
         {
             Console.WriteLine($" Tytuł książki: {this.title}");
-            Console.WriteLine($" Author: {author.firstName} {author.lastName}");
+            Console.WriteLine($" Author: {author.firstName} {author.lastName} Ocena: {rand.Next(0, 10)}");
+       
         }
     }
 }

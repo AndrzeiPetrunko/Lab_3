@@ -8,10 +8,10 @@ namespace Lab_3
 {
     class Person
     {
-        public string firstName {  set;  get; }
-        public string lastName {  set;  get; }
+        public string firstName { protected set; get; }
+        public string lastName { protected set; get; }
         protected int age;
-        public Person() 
+        public Person()
         {
             this.firstName = " ";
             this.lastName = " ";
@@ -22,7 +22,7 @@ namespace Lab_3
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
-            
+
         }
         public int getAge()
         {
@@ -32,7 +32,7 @@ namespace Lab_3
         {
             this.age = age;
         }
-        public void View()
+        virtual public void View()
         {
             Console.WriteLine($"Imię osoby: {this.firstName} Nazwisko: {this.lastName} Wiek: {this.age}");
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Lab_3
 {
@@ -6,19 +7,38 @@ namespace Lab_3
     {
         static void Main(string[] args)
         {
+            Zadanie1();
+           // Zadanie2();
             
-            
-                Book b1 = new Book();
-                b1.title = "Obcy";
-                b1.author.firstName = "AAAA";
-                b1.author.lastName = "BBBB";
-               // b1.View();
+                
+        }
+        static void Zadanie1()
+        {
+            Book b1 = new Book("JA", new Person("AAAA", "BBBB", -1));
+            b1.title = "Obcy";
+            //b1.author.firstName = "AAAA";
+            //b1.author.lastName = "BBBB";
+            b1.View();
             Reader czytelnik1 = new Reader("Ania", "Kowalska", 19);
             czytelnik1.AddBook(b1);
             czytelnik1.AddBook(new Book("W pustyni i puszczy", new Person("Henryk", "Sienkiewicz", 70)));
             czytelnik1.AddBook(new Book("Dawno temu w Warszawie", new Person("Jakub", "Zulczyk", 45)));
-            czytelnik1.ViewBooks();
+            czytelnik1.View();
+            Reviewer r1 = new Reviewer("Andrii", "Petrunko", 18);
+            r1.AddBook(new Book("W pustyni i puszczy", new Person("Henryk", "Sienkiewicz", 70)));
+            r1.View();
+            List<Person> osoby = new List<Person>();
+            osoby.Add(czytelnik1);
+            osoby.Add(r1);
+            foreach (var osoba in osoby)
+            {
+                osoba.View();
+            }
             Console.ReadKey();
+        }
+        static void Zadanie2()
+        {
+
         }
         
     }
