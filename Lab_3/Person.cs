@@ -11,6 +11,19 @@ namespace Lab_3
         public string firstName {  set;  get; }
         public string lastName {  set;  get; }
         protected int age;
+        public Person() 
+        {
+            this.firstName = " ";
+            this.lastName = " ";
+            this.age = 0;
+        }
+        public Person(string firstName, string lastName, int age)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            
+        }
         public int getAge()
         {
             return age;

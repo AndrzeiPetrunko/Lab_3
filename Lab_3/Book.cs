@@ -14,11 +14,18 @@ namespace Lab_3
         public Book()
         {
             author = new Person();
+            this.date = DateTime.Today;
+        }
+        public Book(string tytul, Person author)
+        {
+            this.author = author;
+            this.title = tytul;
+            this.date = DateTime.Today;
         }
         public void View()
         {
-            Console.WriteLine($"Tytuł książki: {this.title}");
-            Console.WriteLine($"Author: {author.firstName} {author.lastName}");
+            Console.WriteLine($" Tytuł książki: {this.title}");
+            Console.WriteLine($" Author: {author.firstName} {author.lastName}");
         }
     }
 }
