@@ -6,7 +6,13 @@ namespace Lab_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Book b1 = new Book();
+            b1.title = "Obcy";
+            b1.author.firstName = "AAAA";
+            b1.author.lastName = "BBBB";
+            b1.View();
+
+
         }
     }
 }
