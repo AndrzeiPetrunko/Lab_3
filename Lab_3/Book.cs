@@ -8,8 +8,8 @@ namespace Lab_3
 {
     class Book
     {
-        public string title {  set; get; }
-        public Person author { protected set; get; }
+        protected string title {  set; get; }
+        protected Person author { set; get; }
         protected DateTime date;
         public Book()
         {
@@ -23,11 +23,12 @@ namespace Lab_3
             this.date = DateTime.Today;
         }
         Random rand = new Random();
-        public void View()
+        public virtual void View()
         {
-            Console.WriteLine($" Tytuł książki: {this.title}");
-            Console.WriteLine($" Author: {author.firstName} {author.lastName} Ocena: {rand.Next(0, 10)}");
-       
+            Console.WriteLine($"Tytuł książki: {this.title}");
+            Console.WriteLine($"Author: {author.firstName} {author.lastName}\nOcena: {rand.Next(0, 10)}");
+            Console.WriteLine();
+
         }
     }
 }

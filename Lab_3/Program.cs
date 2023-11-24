@@ -14,8 +14,8 @@ namespace Lab_3
         }
         static void Zadanie1()
         {
-            Book b1 = new Book("JA", new Person("AAAA", "BBBB", -1));
-            b1.title = "Obcy";
+            Book b1 = new Book("Obcy", new Person("AAAA", "BBBB", 11));
+            //b1.title = "Obcy";
             //b1.author.firstName = "AAAA";
             //b1.author.lastName = "BBBB";
             b1.View();
@@ -34,6 +34,8 @@ namespace Lab_3
             {
                 osoba.View();
             }
+            AdventureBook ab1 = new AdventureBook("elo",new Person("Anna","Biała",10),"GoT");
+            ab1.View();
             Console.ReadKey();
         }
         static void Zadanie2()
