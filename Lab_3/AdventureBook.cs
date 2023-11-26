@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab_3
 {
-     class AdventureBook : Book
-    {   public string Series { set; get; }
+    class AdventureBook : Book
+    {
+        public string Series { set; get; }
         Random rand = new Random();
-        public AdventureBook(string tytul, Person author, string Series):base(tytul, author)
+        public AdventureBook(string tytul, Person author, string Series) : base(tytul, author)
         {
             this.author = author;
             this.Series = Series;

@@ -36,6 +36,8 @@ namespace Lab_3
             }
             AdventureBook ab1 = new AdventureBook("elo",new Person("Anna","Biała",10),"GoT");
             ab1.View();
+            DocumentaryBook db1 = new DocumentaryBook("queen of hatred", new Person("Patryk", "Wyczawski", 41), 123);
+            db1.View();
             Console.ReadKey();
         }
         static void Zadanie2()
