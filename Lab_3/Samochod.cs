@@ -12,15 +12,19 @@ namespace Lab_3
         public string Model { get; set; }
         public string Nadwozie { get; set; }
         public int rokProdukcji { get; set; }
-        public int _Przebieg;
+        private int _Przebieg;
         public int Przebieg
         {
             get { return _Przebieg; }
             set
             {
-                if ( Przebieg > 0)
+                if (value > 0)
                 {
-                    this._Przebieg = Przebieg;
+                    this._Przebieg = value;
+                }
+                else
+                {
+                    Console.WriteLine("Przebieg nie może być ujemny !");
                 }
             }
         }

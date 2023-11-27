@@ -8,7 +8,7 @@ namespace Lab_3
         static void Main(string[] args)
         {
             Zadanie1();
-           // Zadanie2();
+            Zadanie2();
             
                 
         }
@@ -38,13 +38,13 @@ namespace Lab_3
             ab1.View();
             DocumentaryBook db1 = new DocumentaryBook("queen of hatred", new Person("Patryk", "Wyczawski", 41), 123);
             db1.View();
-            Samochod s1 = new Samochod("1", "2", "3", 1999, 2);
-            Console.WriteLine(s1.Przebieg);
-            Console.ReadKey();
+            
         }
         static void Zadanie2()
         {
-
+            Samochod s1 = new Samochod("1", "2", "3", 1999, 22);
+            Console.WriteLine(s1.Przebieg);
+            
         }
         
     }
