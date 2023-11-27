@@ -25,7 +25,7 @@ namespace Lab_3
         public double Waga
         {
             get { return Waga; }
-            set { if (value > 2 && value < 4.5) { this.Waga = value; } else { Console.WriteLine("Waga jest za duża / za mała !"); } }
+            set { if (value > 2.0 && value < 4.5) { this.Waga = value; } else { Console.WriteLine("Waga jest za duża / za mała !"); } }
         }
         public SamochodOsobowy(string Marka, string Model, string Nadwozie, string Kolor, int rokProdukcji, double Przebieg, double Waga, double PojemnoscSilnika, int IloscOsob) : base(Marka, Model, Nadwozie, Kolor, rokProdukcji, Przebieg)
         {

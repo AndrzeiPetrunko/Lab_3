@@ -43,9 +43,10 @@ namespace Lab_3
         static void Zadanie2()
         {
             Samochod s1 = new Samochod("Audi", "A6", "nwm","zielony", 1999, 22);
+            Samochod s2 = new Samochod();
             Console.WriteLine(s1.Przebieg);
             s1.SamochodInfo();
-            SamochodOsobowy so1 = new SamochodOsobowy("BMW","X5","tak","fajny",1743,2.2,2.9,13.7,4);
+            SamochodOsobowy so1 = new SamochodOsobowy("BMW","X5","tak","fajny",1743,2.2,3,13.7,4);
             
         }
         

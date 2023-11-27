@@ -38,6 +38,10 @@ namespace Lab_3
             this.rokProdukcji = rokProdukcji;
             this.Przebieg = Przebieg;
         }
+        public Samochod()
+        {
+            Console.WriteLine("Stworzyłeś samochód!!!");
+        }
         public virtual void SamochodInfo()
         {
             Console.WriteLine($"Marka oraz model: {this.Marka} {this.Model}");
