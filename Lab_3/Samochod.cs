@@ -11,9 +11,10 @@ namespace Lab_3
         public string Marka { get; set; }
         public string Model { get; set; }
         public string Nadwozie { get; set; }
+        public string Kolor { set; get; }
         public int rokProdukcji { get; set; }
-        private int _Przebieg;
-        public int Przebieg
+        private double _Przebieg;
+        public double Przebieg
         {
             get { return _Przebieg; }
             set
@@ -28,13 +29,20 @@ namespace Lab_3
                 }
             }
         }
-        public Samochod(string Marka, string Model, string Nadwozie, int rokProdukcji, int Przebieg)
+        public Samochod(string Marka, string Model, string Nadwozie, string Kolor, int rokProdukcji, double Przebieg)
         {
             this.Marka = Marka;
             this.Model = Model;
             this.Nadwozie = Nadwozie;
+            this.Kolor = Kolor;
             this.rokProdukcji = rokProdukcji;
             this.Przebieg = Przebieg;
+        }
+        public virtual void SamochodInfo()
+        {
+            Console.WriteLine($"Marka oraz model: {this.Marka} {this.Model}");
+            Console.WriteLine($"Nadwozie, kolor: {this.Nadwozie}, {this.Kolor}");
+            Console.WriteLine($"Rok produkcji i obecny przebieg: {this.rokProdukcji} ({this.Przebieg}km)");
         }
     }
 }

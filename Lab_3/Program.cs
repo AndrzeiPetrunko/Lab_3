@@ -42,8 +42,9 @@ namespace Lab_3
         }
         static void Zadanie2()
         {
-            Samochod s1 = new Samochod("1", "2", "3", 1999, 22);
+            Samochod s1 = new Samochod("Audi", "A6", "nwm","zielony", 1999, 22);
             Console.WriteLine(s1.Przebieg);
+            s1.SamochodInfo();
             
         }
         

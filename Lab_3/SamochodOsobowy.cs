@@ -27,11 +27,15 @@ namespace Lab_3
             get { return Waga; }
             set { if (value > 2 && value < 4.5) { this.Waga = value; } else { Console.WriteLine("Waga jest za duża / za mała !"); } }
         }
-        public SamochodOsobowy(string Marka, string Model, string Nadwozie, int rokProdukcji, int Przebieg, int Waga, double PojemnoscSilnika, int IloscOsob) : base(Marka, Model, Nadwozie, rokProdukcji, Przebieg)
+        public SamochodOsobowy(string Marka, string Model, string Nadwozie, string Kolor, int rokProdukcji, double Przebieg, int Waga, double PojemnoscSilnika, int IloscOsob) : base(Marka, Model, Nadwozie, Kolor, rokProdukcji, Przebieg)
         {
             this.Waga = Waga;
             this.PojemnoscSilnika = PojemnoscSilnika;
             this.IloscOsob = IloscOsob;
+        }
+        public override void SamochodInfo()
+        {
+            base.SamochodInfo();
         }
     }
 }
