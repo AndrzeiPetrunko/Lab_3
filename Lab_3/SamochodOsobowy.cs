@@ -8,7 +8,7 @@ namespace Lab_3
 {
     internal class SamochodOsobowy : Samochod
     {
-        private int _Waga;
+        private double _Waga;
         private double _PojemnoscSilnika;
         public int IloscOsob { set; get; }
         public double PojemnoscSilnika
@@ -22,12 +22,12 @@ namespace Lab_3
                 }
             }
         }
-        public int Waga
+        public double Waga
         {
             get { return Waga; }
             set { if (value > 2 && value < 4.5) { this.Waga = value; } else { Console.WriteLine("Waga jest za duża / za mała !"); } }
         }
-        public SamochodOsobowy(string Marka, string Model, string Nadwozie, string Kolor, int rokProdukcji, double Przebieg, int Waga, double PojemnoscSilnika, int IloscOsob) : base(Marka, Model, Nadwozie, Kolor, rokProdukcji, Przebieg)
+        public SamochodOsobowy(string Marka, string Model, string Nadwozie, string Kolor, int rokProdukcji, double Przebieg, double Waga, double PojemnoscSilnika, int IloscOsob) : base(Marka, Model, Nadwozie, Kolor, rokProdukcji, Przebieg)
         {
             this.Waga = Waga;
             this.PojemnoscSilnika = PojemnoscSilnika;
